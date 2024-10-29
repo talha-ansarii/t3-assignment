@@ -96,3 +96,5 @@ The app will be available at http://localhost:3000.
 ## Deployment 
 Deployed on vercel.
 
+``https://t3-assignmentt.vercel.app/``
+
