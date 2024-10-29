@@ -35,7 +35,7 @@ export function configureNextAuthOptions(
   const options: NextAuthOptions = {
     adapter: PrismaAdapter(prisma),
     secret: env.NEXTAUTH_SECRET,
-    debug: false, 
+    debug: true, 
 
     // Configure authentication providers
     providers: [
@@ -76,6 +76,12 @@ export function configureNextAuthOptions(
         },
       }),
     ],
+    theme: {
+      colorScheme: "dark", // "auto" | "dark" | "light"
+      brandColor: "#e5e5e5", // Hex color code
+      logo: "https://auth.vyse.in/icon.png", // Absolute URL to image
+      buttonText: "#FFFFFF" // Hex color code
+    },
 
     // Configure session management
     callbacks: {
