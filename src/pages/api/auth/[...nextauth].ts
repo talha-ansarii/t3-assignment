@@ -61,9 +61,16 @@ export function configureNextAuthOptions(
           }
 
           // Validate the password using bcrypt
-          const isPasswordValid = bcrypt.compareSync(credentials.password, user.password);
-          if (isPasswordValid) {
-            return user;
+          if (!user.password) {
+            console.log("Invalid credentials");
+            return null;
+          }
+          if(user.password){
+            const isPasswordValid = bcrypt.compareSync(credentials.password, user.password);
+            if (isPasswordValid) {
+              return user;
+            }
+
           }
           return null;
         },
