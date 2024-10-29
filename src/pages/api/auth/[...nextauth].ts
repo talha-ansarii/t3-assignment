@@ -35,7 +35,7 @@ export function configureNextAuthOptions(
   const options: NextAuthOptions = {
     adapter: PrismaAdapter(prisma),
     secret: env.NEXTAUTH_SECRET,
-    debug: true, 
+    debug: false, 
 
     // Configure authentication providers
     providers: [
