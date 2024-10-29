@@ -1,4 +1,5 @@
 // @ts-check
+/* eslint @typescript-eslint/no-var-requires: "off" */
 const { clientEnv, clientSchema } = require("./schema.js");
 
 const _clientEnv = clientSchema.safeParse(clientEnv);
@@ -9,7 +10,8 @@ const formatErrors = (
 ) =>
   Object.entries(errors)
     .map(([name, value]) => {
-      if (value && "_errors" in value) return `${name}: ${value._errors.join(", ")}\n`;
+      if (value && "_errors" in value)
+        return `${name}: ${value._errors.join(", ")}\n`;
     })
     .filter(Boolean);
 

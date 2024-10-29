@@ -1,4 +1,4 @@
-const { env } = require("./src/env/server");
+const { env } = require("./src/env/server.js");
 
 /**
  * Don't be scared of the generics here.

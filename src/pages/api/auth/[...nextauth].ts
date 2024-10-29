@@ -3,7 +3,7 @@ import CredentialProvider from "next-auth/providers/credentials";
 import GoogleProvider from "next-auth/providers/google";
 import { PrismaAdapter } from "@next-auth/prisma-adapter";
 import { prisma } from "../../../server/db/client";
-import { env } from "../../../env/server";
+import { env } from "../../../env/server.js";
 import { NextApiRequest, NextApiResponse } from "next";
 import { randomUUID } from "crypto";
 import Cookies from "cookies";

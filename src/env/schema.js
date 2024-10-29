@@ -1,5 +1,6 @@
 // @ts-check
-const { z } = require("zod");
+/* eslint @typescript-eslint/no-var-requires: "off" */
+const { z } =  require("zod");
 
 /**
  * Specify your server-side environment variables schema here.
